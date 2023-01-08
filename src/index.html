@@ -165,50 +165,11 @@
       color: var(--primary);
     }
 
-    #contact {
-      padding: 0 2rem;
-      padding-top: 0;
-      padding-bottom: 25vh;
-    }
-
-    #contact>h2 {
-      font-size: 1.5rem;
-
-      margin-top: 35vh;
-      padding: 0.2rem;
-
-      text-align: center;
-      font-weight: bold;
-    }
-
-    #icons {
-      margin: 2rem 0 35vh 0;
-      padding: 0;
-
-      list-style: none;
-
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-
-    #icons>li {
-      margin: 0 1rem;
-    }
-
-    #icons svg {
-      height: 3rem;
-    }
-
-    #icons svg:hover,
-    #icons svg:focus {
-      --primary: var(--primary-fade)
-    }
-
-
     #cards {
       list-style: none;
       padding: 0;
+
+      margin: 35vh 0;
     }
 
     #cards>a {
@@ -252,6 +213,46 @@
 
       object-fit: cover;
       object-position: center;
+    }
+
+    #contact {
+      padding: 0 2rem;
+      padding-top: -10vh;
+      padding-bottom: 25vh;
+    }
+
+    #contact>h2 {
+      font-size: 1.5rem;
+
+      margin-top: 35vh;
+      padding: 0.2rem;
+
+      text-align: center;
+      font-weight: bold;
+    }
+
+    #icons {
+      margin: 2rem 0;
+      padding: 0;
+
+      list-style: none;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    #icons>li {
+      margin: 0 1rem;
+    }
+
+    #icons svg {
+      height: 3rem;
+    }
+
+    #icons svg:hover,
+    #icons svg:focus {
+      --primary: var(--primary-fade)
     }
   </style>
 </head>
@@ -313,6 +314,28 @@
       </p>
     </section>
 
+    <section id="cards">
+      <a title="Afetivos" href="/whats" target="_blank">
+        <img src="/assets/afetivos.jpeg" alt="Exemplo de pedido para presentes afetivos">
+        <div>Solicite seu orçamento de bordados e presentes afetivos, como canecas e taças.</div>
+      </a>
+
+      <a title="Pré estabelecidos" href="/elo7" target="_blank">
+        <img src="/assets/pre-estabelecidos.jpeg" alt="Exemplo de pedido pré estabelecido">
+        <div>Na Elo7 você vai encontrar modelos só com nomes e datas personalizáveis.</div>
+      </a>
+
+      <a title="Especiais" href="/insta" target="_blank">
+        <img src="/assets/especiais.jpeg" alt="Exemplo de pedido especial">
+        <div>Encomendas de canecas, copos, caixas de MDF personalizada.</div>
+      </a>
+
+      <a title="Noivos" href="/insta" target="_blank">
+        <img src="/assets/noivos.jpeg" alt="Exemplo de pedido para noivos">
+        <div>Orçamento personalizado de novos modelos de porta alianças + elaboração de riscos.</div>
+      </a>
+    </section>
+
     <section id="contact">
       <h2>Faça sua encomenda!</h2>
 
@@ -345,28 +368,6 @@
           </a>
         </li>
       </ul>
-
-      <div id="cards">
-        <a title="Pré estabelecidos" href="/elo7" target="_blank">
-          <img src="/assets/pre-estabelecidos.jpeg" alt="Exemplo de pedido pré estabelecido">
-          <div>Na Elo7 você vai encontrar modelos só com nomes e datas personalizáveis.</div>
-        </a>
-
-        <a title="Noivos" href="/insta" target="_blank">
-          <img src="/assets/noivos.jpeg" alt="Exemplo de pedido para noivos">
-          <div>Orçamento personalizado de novos modelos de porta alianças + elaboração de riscos.</div>
-        </a>
-
-        <a title="Especiais" href="/insta" target="_blank">
-          <img src="/assets/especiais.jpeg" alt="Exemplo de pedido especial">
-          <div>Encomendas de canecas, copos, caixas de MDF personalizada.</div>
-        </a>
-
-        <a title="Afetivos" href="/whats" target="_blank">
-          <img src="/assets/afetivos.jpeg" alt="Exemplo de pedido para presentes afetivos">
-          <div>Solicite seu orçamento de bordados e presentes afetivos, como canecas e taças.</div>
-        </a>
-      </div>
     </section>
   </main>
 
