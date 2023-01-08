@@ -19,7 +19,7 @@
       --bg: #647d67;
       --primary: #fdd8d8;
       --primary-fade: #fdd8d8bf;
-      --width: min(max(50vw, 600px), 100vw)
+      --width: min(max(50vw, 720px), 100vw)
     }
 
     html,
@@ -71,7 +71,7 @@
     #subtitles {
       padding: 0 2rem;
 
-      height: calc(100vh - 15rem);
+      height: calc(100vh - 20rem);
       justify-content: center;
       align-items: center;
       display: flex;
@@ -123,7 +123,7 @@
     }
 
     #showcase>div>img {
-      width: 35%;
+      width: min(25rem, 45vw);
       height: min(25rem, 45vh);
 
       margin: 0 1rem;
@@ -372,21 +372,23 @@
   </main>
 
   <script>
-    const showcases = document.querySelectorAll('#showcase>div');
+    // Scrolls the showcase to the opposite side
+    const firstShowcase = document.querySelector('#showcase>div:nth-child(1)');
+    const secondShowcase = document.querySelector('#showcase>div:nth-child(2)');
 
-    for (const showcase of showcases) {
+
+    for (const showcase of [firstShowcase, secondShowcase]) {
       showcase.addEventListener('wheel', (event) => {
         event.preventDefault();
 
+        const modifier = showcase === firstShowcase ? -1 : 1;
+
         showcase.scrollBy({
-          left: event.deltaX === 0 ? event.deltaY > 0 ? 30 : -30 : event.deltaX
+          left: event.deltaX === 0 ? event.deltaY > 0 ? modifier * 30 : modifier * -30 : event.deltaX
         });
       }, { passive: false })
     }
 
-    // Scrolls the showcase to the opposite side
-    const firstShowcase = document.querySelector('#showcase>div:nth-child(1)');
-    const secondShowcase = document.querySelector('#showcase>div:nth-child(2)');
 
     window.addEventListener('scroll', () => {
       firstShowcase.scroll({ left: -firstShowcase.scrollWidth, behavior: 'smooth' })
