@@ -8,7 +8,7 @@
     "build": "npm run build:clean && npm run build:assets && npm run build:html",
     "build:clean": "rm -rf docs && mkdir docs",
     "build:html": "html-minifier --input-dir src --file-ext html --output-dir docs --remove-comments --collapse-whitespace --minify-js true --minify-css true --use-short-doctype --sort-class-name --sort-attributes --remove-redundant-attributes",
-    "build:assets": "cp -r src docs"
+    "build:assets": "cp -r src/* docs"
   },
   "dependencies": {
     "html-minifier": "^4.0.0"
